@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>مريم ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family: Arial, sans-serif;
+    background: #5a0f2d; /* لون أولي برجندي */
+    color:white;
+    text-align:center;
+    overflow-x:hidden;
+    transition: background 0.5s;
+}
+
+.page{
+    display:none;
+    height:100vh;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+input{
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    margin:10px;
+    text-align:center;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:#ff4d6d;
+    color:white;
+}
+
+.name{
+    font-size:70px;
+    margin-top:30px;
+    text-shadow:2px 2px 8px rgba(255,0,90,0.6);
+}
+
+#counter{
+    margin-top:20px;
+    font-size:22px;
+}
+
+#message{
+    width:85%;
+    margin:auto;
+    margin-top:30px;
+    font-size:20px;
+    line-height:1.8;
+    min-height:250px;
+}
+
+iframe{
+    margin-top:30px;
+    border-radius:15px;
+    display:none;
+}
+
+@keyframes shake {
+  0% { transform: translate(0px, 0px); }
+  25% { transform: translate(-5px, 5px); }
+  50% { transform: translate(5px, -5px); }
+  75% { transform: translate(-5px, 5px); }
+  100% { transform: translate(0px, 0px); }
+}
+
+.shake{
+    animation: shake 0.5s;
+}
+@keyframes fall {
+0%{transform:translateY(0);}
+100%{transform:translateY(100vh);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- صفحة الباسورد -->
+<div class="page" id="page1" style="display:flex;">
+<h2>اكتبي عيد ميلادك يبنوتي ❤️</h2>
+<input type="password" id="pass1" placeholder="17/8/2013">
+<button onclick="checkPass()">دخول</button>
+</div>
+
+<!-- الصفحة الرئيسية -->
+<div class="page" id="main">
+<div id="emojiExplosion"></div>
+<div class="name"></div>
+<div id="counter"></div>
+<div id="message"></div>
+
+<!-- فيديو اغنية سنين توليت -->
+<iframe id="video" width="300" height="170" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
+<script>
+let birthday = "17/8/2013";
+let message = `انا بقيت بدمنك بجد عارفه مدمن المخدرات؟ لا انا مدمن لحبك وليكي ولعيونك اللى كل متحصل حاجه وحشه ليا بدخل ابصلها واتوه والله ربنا يعلم انا بحبك قد اى وبحبك ازاى بقيت اصحى الصبح امسك الفون وابص لصورتك ومش متخيل بجد انك معايا ولا بتحبيني كل يوم حبى ليكي بيزيد اضغاففف كتير اوى وبقيت بحلم بيكي وعمرها محصلت مع بنت وبقيت بسهر وبكلمك بالساعات عارف انك ساعات كدا بيجيلك تفكير انى مش بحبك او بلعب بيكي بس العب بيكي ازاى واسيب الجمال ده والعيون والضحكه الحلوه دي تروح لغيري وغيري يكون بيبصلها انا عمري مهقبل مخلوق يبصلك علشان انتى ليا وانا ليكي لحد اخر يوم فى عمرنا احنا سوا ان شاء الله وغصب عن اى حد والله وبكره اجى اخدك من اهلك وتبقي بتاعتى رسمي وعمري م هخلى حد يشمت فيكي لو لحظه بس وهخليكي تغظيهم وانتى فى بيتنا ولابسه دبلتى انتى والله مش انسانه عاديه انتى نجمه ونزلت على الارض بالغلط مش حاسه بقيمه نفسك بس بجد انتى غاليه اوى واغلى مما تتصوري كمان انتى احسن انسانه شافتها عيونى بقولك والله العظيم مشوفت بنت احلى منك بقيت مبحبش ابص لبنات انتى ماليه عيني وقلبي وروحي انتى الكلام خلص فيكي خلاص لو وصفتك مش هوفيلك ربع حقك انتى ملاك ونازل على الارض عايزك دايما مبسوطه متخليش حد يعكننك او يخلى الضحكه القمر تفارق وشك فرحه بسيطه منك هتعيشني مليون سنه مبسوط بجد ومش ببالغ بحبك لما تشاركيني حجاتك بقيت بحس ب امان معاكى وعمري محسيتو مع حد والله وراحه وحب وطمانينه ودفا كدا بجد مكفيانى من كل النواحى اسيبك بعد كل ده واروح لغيرك وعد وعد وعد عمري معملها الا لو كنت داخل قبري وبقيت بدعى ربنا يطول فى عمري علشان عايز اعيشو معاكى لسه مشبعتش منك ولا هشبع انتى مريومتي امى واختى وصحبتى وبنتى وحبيبتي ومراتى وخطيبتي ودنيتى وقمري وقلبي وحياتى وعمري وروحي وبجد دى اجمل سنه فى حياتى بالنسبه ليا اول سنه نبقا مع بعض فيها مش هقدر انساها وحابب اقولك انى مش ندمان انى دخلتك حياتى ولا هندم انى اختارتك شريكه حياتي مش ندمان انى حبيتك ولا انى دخلتك حياتى بالعكس فخور اوى بختياري ده ودايما فخور ب اى حاجه بتعمليها حتى لو كانت صغيره خالص ومهما قولت كلام مش هيوصف حبي ليكي مبسوط اوى اوى اوى بجد اننا الحمدلله مش بنتخانق ولا نزعل من بعض ووقت مهيحصل كدا بنقلب الموضوع هزار علشان مش هنقدر نبعد عن بعض لو دقيقه واحده انتى سندى فى الدنيا انتى حته منى ونصي التانى وعوضى عن كل اللى راح ونعمه من عند ربنا نزلها عليا مش عارف انا عملت اى علشان تبقا بالحلاوه دى بس ربنا كريم والحمدلله جابك لياا انتى جنتى وسعادتى وضحكتى انتى اهلى وناسي الدنيا دى متسواش حاجه مقابل انك تكونى جنبي طول العمر والعمر كلو ومعاكى الف خناقه ولا ضحكه مع غيرك ربنا يخليكي ليا وميحرمنيش منك ابدا وربنا يحفظك ليا وتكونى من نصيبي بحبككككك اووووووييي مريومتي`;
+
+let i = 0;
+
+function checkPass(){
+    if(document.getElementById("pass1").value === birthday){
+        document.getElementById("page1").style.display="none";
+        setTimeout(() => {
+            document.body.style.background="black";
+            explodeEmojis();
+            document.getElementById("main").style.display="flex";
+            typeName();
+        },3000);
+    } else{
+        alert("ركزي يا مريم ❤️");
+    }
+}
+
+function explodeEmojis(){
+    let container=document.getElementById("emojiExplosion");
+    for(let i=0;i<50;i++){
+        let span=document.createElement("span");
+        span.innerHTML="💋";
+        span.style.position="absolute";
+        span.style.left=Math.random()*100+"%";
+        span.style.top="-50px";
+        span.style.fontSize=(20+Math.random()*30)+"px";
+        span.style.animation="fall "+(1+Math.random()*1.5)+"s linear forwards";
+        container.appendChild(span);
+    }
+}
+
+let nameText="مريم ❤️";
+let n=0;
+function typeName(){
+    if(n<nameText.length){
+        document.querySelector(".name").innerHTML+=nameText[n];
+        n++;
+        setTimeout(typeName,200);
+    } else {
+        startCounter();
+        typeMessage();
+    }
+}
+
+function startCounter(){
+    let startDate = new Date("2025-01-15T00:00:00");
+    setInterval(()=>{
+        let now = new Date();
+        let diff = now - startDate;
+
+        let days = Math.floor(diff / (1000*60*60*24));
+        let hours = Math.floor((diff / (1000*60*60)) % 24);
+        let minutes = Math.floor((diff / (1000*60)) % 60);
+        let seconds = Math.floor((diff / 1000) % 60);
+
+        document.getElementById("counter").innerHTML =
+        `عدى على حبنا: ${days} يوم | ${hours} ساعة | ${minutes} دقيقة | ${seconds} ثانية ❤️`;
+    },1000);
+}
+
+let j=0;
+function typeMessage(){
+    if(j<message.length){
+        document.getElementById("message").innerHTML += message[j];
+        if(message.slice(j-5,j+1)==="بحبك"){ 
+            let elem = document.getElementById("message");
+            elem.classList.add("shake");
+            elem.style.fontSize="28px";
+            setTimeout(()=>{
+                elem.style.fontSize="20px";
+                let vid = document.getElementById("video");
+                vid.style.display="block";
+                vid.src="https://www.youtube.com/embed/6I8wq5DH7bE?autoplay=1";
+            },500);
+        }
+        j++;
+        setTimeout(typeMessage,25);
+    }
+}
+</script>
+
+</body>
+</html>
